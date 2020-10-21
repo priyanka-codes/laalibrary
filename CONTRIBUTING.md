@@ -2,7 +2,7 @@
 The following is a set of guidelines for contributing to LA Library and its packages, which are hosted in the ACM PES University, EC Campus on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 ## Code of Conduct
-<Ask to go to code of conduct file.>
+Given in [CODE_OF_CONDUCT.md](https://github.com/acmpesuecc/laalibrary/CODE_OF_CONDUCT.md)
 
 ## For queries
 Contact shr1010@gmail.com
