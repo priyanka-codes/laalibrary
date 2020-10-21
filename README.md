@@ -6,3 +6,4 @@ Those contributing to this repository must keep the following things in mind:
 - All programming must be done using the object-oriented paradigm
 - All functions must have basic error/exception handling
 - Known limitations of methods(functions) must be documented
+- Contributors must refrain from using standard library functions of these operations or related to the operation as the aim of the project is to create a library for these operations.
