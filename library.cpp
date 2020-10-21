@@ -17,9 +17,24 @@ class Matrix
 		void printMatrix();
 
 		//Member functions
-		int *gaussElimination();
+		Matrix addition(); //Matrix addition
+		Matrix subtraction(); //Matrix subtraction
+		Matrix multiplication(); //Matrix multiplication
+		int isIdentity(); //Returns 1 if it is an identity matrix else returns 0
+		int isSquare(); //Checks if matrix is a square matrix
+		int trace(); //Find the trace of a given matrix
+		int *dimensions(); //Find the dimensions of a matrix
+		int *gaussElimination(); 
 		Matrix columnSpace();
 		Matrix transpose();
+		Matrix nullSpace();
+		Matrix inverse();
+		int *eigenValues();
+		Matrix eigenVectors();
+		int *graph(); //If the matrix represents a graph return number of edges and vertices else return NULL
+		Matrix *LUdecomposition();
+		Matrix *LDUdecomposition();
+		Matrix *SVD(); //Single-value decomposition
 };
 
 Matrix::Matrix(int row,int column)
