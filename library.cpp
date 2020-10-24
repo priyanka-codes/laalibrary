@@ -70,7 +70,7 @@ Matrix Matrix::addition() {
    return res;
 }
 
-Matrix Matrix::subtraction() {
+Matrix Matrix::subtraction() { //PR for subtraction
     Matrix m1(r,c);
     Matrix m2(r,c);
     Matrix res(r,c);
