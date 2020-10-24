@@ -82,6 +82,17 @@ Matrix Matrix::subtraction() { //PR for subtraction
    return res;
 }
 
+Matrix Matrix::multiplication() {
+
+   Matrix res(r,c);
+   for(int i=0;i<r;i++){
+       for(int j=0;j<c;j++) {
+           res.m[i][j] = m[i][j] *  m[i][j];
+       }
+   }
+  return res;
+}
+
 int *Matrix::gaussElimination()
 {
 	int x_arr[100];
@@ -138,6 +149,10 @@ int main()
     cout<<"\n";
 
     resu = m.subtraction();
+    resu.printMatrix();
+    cout<<"\n";
+	
+    resu = m.multiplication();
     resu.printMatrix();
     cout<<"\n";
 
