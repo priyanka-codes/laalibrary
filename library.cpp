@@ -24,7 +24,7 @@ class Matrix
 		int isSquare(); //Checks if matrix is a square matrix
 		int trace(); //Find the trace of a given matrix
 		int *dimensions(); //Find the dimensions of a matrix
-		int *gaussElimination(); 
+		int *gaussElimination();
 		Matrix columnSpace();
 		Matrix transpose();
 		Matrix nullSpace();
@@ -54,8 +54,28 @@ void Matrix::printMatrix()
 {
 	for(int i=0;i<r;i++)
 		for(int j=0;j<c;j++)
-			// Prints ' ' if j != n-1 else prints '\n'           
-          		cout << m[i][j] << " \n"[j == c-1]; 
+			// Prints ' ' if j != n-1 else prints '\n'
+          		cout << m[i][j] << " \n"[j == c-1];
+}
+
+Matrix Matrix::addition() {
+    Matrix res(r,c);
+    for(int i=0;i<r;i++) {
+        for(int j=0;j<c;j++) {
+            res.m[i][j] = m[i][j] + m[i][j];
+        }
+    }
+   return res;
+}
+
+Matrix Matrix::subtraction() {
+    Matrix res(r,c);
+    for(int i=0;i<r;i++) {
+        for(int j=0;j<c;j++) {
+            res.m[i][j] = m[i][j] - m[i][j];
+        }
+    }
+   return res;
 }
 
 int *Matrix::gaussElimination()
@@ -108,15 +128,23 @@ int main()
 	cout<<"\n";
 	m.printMatrix();
 	cout<<"\n";
-	
+
+    Matrix resu = m.addition();
+    resu.printMatrix();
+    cout<<"\n";
+
+    Matrix resu = m.subtraction();
+    resu.printMatrix();
+    cout<<"\n"
+
 	Matrix out=m.transpose();
 	out.printMatrix();
 	cout<<"\n";
-	
+
 	int *y=m.gaussElimination();
 	m.printMatrix();
 	cout<<"\n";
-	
+
 	Matrix out1=m.columnSpace();
 	out1.printMatrix();
 	return 0;
