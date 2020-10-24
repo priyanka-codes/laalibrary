@@ -59,20 +59,24 @@ void Matrix::printMatrix()
 }
 
 Matrix Matrix::addition() {
+    Matrix m1(r,c);
+    Matrix m2(r,c);
     Matrix res(r,c);
     for(int i=0;i<r;i++) {
         for(int j=0;j<c;j++) {
-            res.m[i][j] = m[i][j] + m[i][j];
+            res.m[i][j] = m1.m[i][j] + m2.m[i][j];
         }
     }
    return res;
 }
 
 Matrix Matrix::subtraction() {
+    Matrix m1(r,c);
+    Matrix m2(r,c);
     Matrix res(r,c);
     for(int i=0;i<r;i++) {
         for(int j=0;j<c;j++) {
-            res.m[i][j] = m[i][j] - m[i][j];
+            res.m[i][j] = m1.m[i][j] - m2.m[i][j];
         }
     }
    return res;
@@ -133,9 +137,9 @@ int main()
     resu.printMatrix();
     cout<<"\n";
 
-    Matrix resu = m.subtraction();
+    resu = m.subtraction();
     resu.printMatrix();
-    cout<<"\n"
+    cout<<"\n";
 
 	Matrix out=m.transpose();
 	out.printMatrix();
